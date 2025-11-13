@@ -5,10 +5,10 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r"users", views.UserViewSet)
 router.register(r"groups", views.GroupViewSet)
-
+router.register(r"contactos", views.ContactoViewSet)
 
 urlpatterns = [
-    path("", include(router.urls)),
+    path("api/", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path('personas/', views.lista_contactos, name='lista_contactos'),                   # Pagina de Contactos
     path('personas/nuevo/', views.nuevo_contacto, name='nuevo_contacto'),               # Pagina para agregar nuevo contacto
