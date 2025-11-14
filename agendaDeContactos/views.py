@@ -3,6 +3,7 @@ from django.shortcuts import render
 from contactos.models import Contacto
 from django.db.models import Q
 
+
 #Pagina de inicio
 
 def inicio(request): 
