@@ -38,6 +38,14 @@ ALLOWED_HOSTS = [
     ".onrender.com",    
 ]   
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+    "http://localhost:5500",
+    "http://localhost:4280",
+    "http://localhost:8080",
+    "https://evaluacion2-agendadecontactospersonal.onrender.com",
+]
 
 # Application definition
 
@@ -81,6 +89,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'agendaDeContactos.urls'
