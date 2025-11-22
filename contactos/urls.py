@@ -8,6 +8,7 @@ router = routers.DefaultRouter()
 router.register(r"users", views.UserViewSet)
 router.register(r"groups", views.GroupViewSet)
 router.register(r"contactos", views.ContactoViewSet)
+router.register(r"personas", views.PersonasViewSet, basename="personas")
 
 urlpatterns = [
     # Rutas JWT

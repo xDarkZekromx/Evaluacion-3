@@ -7,6 +7,11 @@ class ContactoSerializer(serializers.ModelSerializer):
         model = Contacto
         fields = ['url', 'nombre', 'telefono', 'correo', 'direccion']
 
+class PersonasSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contacto
+        fields = ['url', 'nombre', 'telefono', 'correo', 'direccion']
+
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
