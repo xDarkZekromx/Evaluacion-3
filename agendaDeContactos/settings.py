@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
 ]   
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200" #Angular test xd
     "http://localhost:8080",
     "http://127.0.0.1:9000",
     "http://localhost:5500",
