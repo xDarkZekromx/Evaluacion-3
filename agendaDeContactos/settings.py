@@ -42,6 +42,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://127.0.0.1:9000",
     "http://localhost:5500",
+    "http://localhost:5432",
     "http://localhost:4280",
     "http://localhost:8080",
     "https://evaluacion2-agendadecontactospersonal.onrender.com",
@@ -117,23 +118,23 @@ WSGI_APPLICATION = 'agendaDeContactos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+DATABASES = {
+   "default": {
+       "ENGINE": "django.db.backends.postgresql",
+       "NAME": os.getenv("db_name"),
+       "USER": os.getenv("db_user"),
+       "PASSWORD": os.getenv("db_password"),
+       "HOST": os.getenv("db_host"),
+       "PORT": os.getenv("db_port"),
+   }
+}
+
 #DATABASES = {
-#    "default": {
-#        "ENGINE": "django.db.backends.postgresql",
-#        "NAME": os.getenv("db_name"),
-#        "USER": os.getenv("db_user"),
-#        "PASSWORD": os.getenv("db_password"),
-#        "HOST": os.getenv("db_host"),
-#        "PORT": os.getenv("db_port"),
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME':  'db.sqlite3',
 #    }
 #}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':  'db.sqlite3',
-    }
-}
 
 
 # Password validation
