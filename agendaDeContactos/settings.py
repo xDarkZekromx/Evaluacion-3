@@ -47,6 +47,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4280",
     "http://localhost:8080",
     "https://evaluacion2-agendadecontactospersonal.onrender.com",
+    "https://agenda-frontend-django-desplegado.onrender.com/",
 ]
 
 # Application definition
