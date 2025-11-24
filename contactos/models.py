@@ -9,7 +9,7 @@ class Contacto(models.Model):
         max_length=9,
         validators=[
             RegexValidator(                         #Validador de numeros
-                regex=r'^[29]\d{8}$',               #Recuadro solicita comenzar con 2 o 9 y tener 9 digitos   
+                regex=r'^[29]\d{8}$',               #Recuadro solicita comenzar con 2 o 9 y tener 9 digitos máximo
                 message="El número debe comenzar con 2 (casa) o 9 (móvil) y tener 9 digitos."   #Mensaje de error
             )
         ]
