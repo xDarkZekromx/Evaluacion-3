@@ -5,12 +5,12 @@ from .models import Contacto
 class ContactoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contacto
-        fields = ['url', 'nombre', 'telefono', 'correo', 'direccion']
+        fields = ['id', 'url', 'nombre', 'telefono', 'correo', 'direccion']
 
 class PersonasSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contacto
-        fields = ['url', 'nombre', 'telefono', 'correo', 'direccion']
+        fields = ['id', 'url', 'nombre', 'telefono', 'correo', 'direccion']
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
